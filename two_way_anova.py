@@ -11,6 +11,7 @@ def two_way_anova():
     b = int(input("Enter the no of Blocks: "))
     alpha = float(input("Level of significance: "))
     data_each = []
+    print("Enter the Data\n")
     for i in range(0, a):
         t_ = input().strip().split(" ")
         t = [float(x) for x in t_]
