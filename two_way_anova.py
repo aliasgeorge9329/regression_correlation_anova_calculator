@@ -72,43 +72,43 @@ def two_way_anova():
     for i in range(1, a + 1):
         null_string_tr += f"⍺{i}="
         alternative_tr += f"⍺{i}≠"
-    null_string_tr += "=0"
-    alternative_tr += "≠0"
+    null_string_tr = null_string_tr[:-1] + "=0"
+    alternative_tr = alternative_tr[:-1] + "≠0"
 
     null_string_bl = ""
     alternative_bl = ""
     for i in range(1, b + 1):
         null_string_bl += f"β{i}="
         alternative_bl += f"β{i}≠"
-    null_string_bl += "=0"
-    alternative_bl += "≠0"
+    null_string_bl = null_string_bl[:-1] + "=0"
+    alternative_bl = alternative_bl[:-1] + "≠0"
 
     print("\nTreatments Testing")
-    print(f"Testing {alternative_tr[:-1]} the alternative Hypothesis to test with null {null_string_tr[:-1]}")
+    print(f"Testing {alternative_tr} the alternative Hypothesis to test with null {null_string_tr}")
 
     test_statistics_value_tr = _Ftr
     critical_value_tr = round(f.isf(alpha, dfn=(a - 1), dfd=((a-1)*(b-1))), 4)
 
-    print(f"The null {null_string_tr[:-1]} must be rejected if F>{critical_value_tr}\n")
+    print(f"The null {null_string_tr} must be rejected if F>{critical_value_tr}\n")
     print("Calculations\n")
     print(f"F(Tr) = {test_statistics_value_tr}\n")
     print("Decision\n")
     if test_statistics_value_tr > critical_value_tr:
-        print(f"Null {null_string_tr[:-1]} must be Rejected at level of significance {alpha} and Accept {alternative_tr[:-1]}")
+        print(f"Null {null_string_tr} must be Rejected at level of significance {alpha} and Accept {alternative_tr}")
     else:
-        print(f"Failure to reject Null {null_string_tr[:-1]}")
+        print(f"Failure to reject Null {null_string_tr}")
 
     print("\n\nBlocks Testing")
-    print(f"Testing {alternative_bl[:-1]}  the alternative Hypothesis to test with null {null_string_bl[:-1]}")
+    print(f"Testing {alternative_bl}  the alternative Hypothesis to test with null {null_string_bl}")
     test_statistics_value_bl = _Fbl
     critical_value_bl = round(f.isf(alpha, dfn=(b - 1), dfd=((a-1)*(b-1))), 4)
 
-    print(f"The null {null_string_bl[:-1]} must be rejected if F>{critical_value_bl}\n")
+    print(f"The null {null_string_bl} must be rejected if F>{critical_value_bl}\n")
     print("Calculations\n")
     print(f"F(Bl) = {test_statistics_value_bl}\n")
     print("Decision\n")
     if test_statistics_value_bl > critical_value_bl:
         print(
-            f"Null {null_string_bl[:-1]} must be Rejected at level of significance {alpha} and Accept {alternative_bl[:-1]}")
+            f"Null {null_string_bl} must be Rejected at level of significance {alpha} and Accept {alternative_bl}")
     else:
-        print(f"Failure to reject Null {null_string_bl[:-1]}")
+        print(f"Failure to reject Null {null_string_bl}")
