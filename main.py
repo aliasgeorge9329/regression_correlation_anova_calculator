@@ -13,16 +13,16 @@ print("4.Two Way Anova")
 choice = int(input())
 print("\n")
 if choice == 1:
-    print("\n1.Regression")
+    print("1.Regression\n")
     regression()
 elif choice == 2:
-    print("2.Correlation")
+    print("2.Correlation\n")
     correlation()
 elif choice == 3:
-    print("3.One Way Anova")
+    print("3.One Way Anova\n")
     one_way_anova()
 elif choice == 4:
-    print("4.Two Way Anova")
+    print("4.Two Way Anova\n")
     two_way_anova()
 else:
-    print("Invalid!")
+    print("Invalid!\n")
