@@ -1,8 +1,9 @@
 from regression import *
 from correlation import *
 from one_way_anova import *
+from two_way_anova import *
 
-print("Welcome to Regression,Correlation, Anova Calculator")
+print("Welcome to Regression,Correlation, Anova Calculator by AG")
 
 print("\n1.Regression")
 print("2.Correlation")
@@ -22,6 +23,6 @@ elif choice == 3:
     one_way_anova()
 elif choice == 4:
     print("4.Two Way Anova")
-    pass
+    two_way_anova()
 else:
     print("Invalid!")

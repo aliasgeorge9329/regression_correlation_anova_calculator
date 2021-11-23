@@ -62,7 +62,7 @@ def one_way_anova():
     print("\n")
 
     table.add_row(["Treatments", f"k-1 ={no_of_groups - 1}", f"SS(Tr) = {ss_tr}", f"MS(Tr) = {ms_tr}", f"{_F}"])
-    table.add_row(["Error", f"N-k ={_N - no_of_groups}", f"SS(Tr) = {sse}", f"MS(Tr) = {mse}", ""])
+    table.add_row(["Error", f"N-k ={_N - no_of_groups}", f"SSE = {sse}", f"MSE = {mse}", ""])
     table.add_row(["-------------", "-------------", "-------------", "-------------", "-------------"])
     table.add_row(["Total", f"N-1 ={_N -1}", f"SST = {sst}", "", ""])
 
