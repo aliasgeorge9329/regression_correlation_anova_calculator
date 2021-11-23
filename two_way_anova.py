@@ -11,7 +11,7 @@ def two_way_anova():
     b = int(input("Enter the no of Blocks: "))
     alpha = float(input("Level of significance: "))
     data_each = []
-    print("Enter the Data\n")
+    print("\nEnter the Data\n")
     for i in range(0, a):
         t_ = input().strip().split(" ")
         t = [float(x) for x in t_]
@@ -23,7 +23,7 @@ def two_way_anova():
     _Tab2 = np.sum(data**2)
     _Ta = data.sum(axis=1)
     _Ta2 = data.sum(axis=1)**2
-    _Tb = data.sum(axis=1)
+    _Tb = data.sum(axis=0)
     _Tb2 = data.sum(axis=0)**2
     _C = round(_Tab**2 / (a*b), 5)
 
