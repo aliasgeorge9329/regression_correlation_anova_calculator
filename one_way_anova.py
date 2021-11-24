@@ -51,6 +51,7 @@ def one_way_anova():
     print(f"N (Total no of Samples in all Groups) = {_N}")
     print(f"ni (No of Samples in each Groups) = {ni}")
     print(f"\nTi (Sum of Samples in each Groups) = {_Ti}")
+    print(f"ΣΣ yij^2 = {xij_square_sum}")
     print(f"T (Sum of Samples in all Groups) = {_T}")
     print(f"C (T^2 /N) = {_C}\n")
     print(f"\nSS(Tr) = {ss_tr}")

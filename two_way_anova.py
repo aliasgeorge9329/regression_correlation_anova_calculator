@@ -45,6 +45,7 @@ def two_way_anova():
 
     print(f"\nTi. = {_Ta}")
     print(f"T.j = {_Tb}")
+    print(f"T.. = {_Tab}")
     print(f"ΣΣ yij^2 = {_Tab2}")
     print(f"C (T..^2 / a*b) = {_C}\n")
     print(f"\nSS(Tr) = {ss_tr}")
@@ -58,8 +59,8 @@ def two_way_anova():
     print(f"F_Bl (MS(Bl)/MSE) = {_Fbl}")
     print("\n")
 
-    table.add_row(["Treatments", f"a-1 = {a - 1}", f"SS(Tr) = {ss_tr}", f"MS(Tr) = {ms_tr}", f"F(Tr){_Ftr}"])
-    table.add_row(["Blocks", f"b-1 = {b - 1}", f"SS(Bl) = {ss_bl}", f"MS(Bl) = {ms_bl}", f"F(Bl){_Fbl}"])
+    table.add_row(["Treatments", f"a-1 = {a - 1}", f"SS(Tr) = {ss_tr}", f"MS(Tr) = {ms_tr}", f"F(Tr) = {_Ftr}"])
+    table.add_row(["Blocks", f"b-1 = {b - 1}", f"SS(Bl) = {ss_bl}", f"MS(Bl) = {ms_bl}", f"F(Bl) = {_Fbl}"])
     table.add_row(["Error", f"(a-1)(b-1) = {((a-1)*(b-1))}", f"SSE = {sse}", f"MSE = {mse}", ""])
     table.add_row(["-------------", "-------------", "-------------", "-------------", "-------------"])
     table.add_row(["Total", f"ab-1 = {a*b - 1}", f"SST = {sst}", "", ""])
