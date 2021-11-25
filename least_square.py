@@ -38,6 +38,10 @@ def lst_square(x, y):
     print(f"\nSxx = {sum_x_2} - ({sum_x})^2/{n} = {s_xx}")
     print(f"Syy = {sum_y_2} - ({sum_y})^2/{n} = {s_yy}")
     print(f"Sxy = {sum_xy} - ({sum_x})*({sum_y})/{n} = {s_xy}\n")
+    print(f"Sum_all_x = {sum_x}")
+    print(f"x̄ = {sum_x / n}")
+    print(f"Sum_all_y = {sum_y}")
+    print(f"ȳ = {sum_y / n}\n")
 
     return s_xx, s_yy, s_xy, sum_x, sum_y, n
 
